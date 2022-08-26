@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/TheSethness/ticketmaster-discovery/static/css/main.9de7cfda.css",
-    "main.js": "/TheSethness/ticketmaster-discovery/static/js/main.32df2948.js",
-    "static/js/787.79ab8b55.chunk.js": "/TheSethness/ticketmaster-discovery/static/js/787.79ab8b55.chunk.js",
-    "static/media/logo.svg": "/TheSethness/ticketmaster-discovery/static/media/logo.4dd60d3eb73bee88378476193f84bf25.svg",
-    "index.html": "/TheSethness/ticketmaster-discovery/index.html",
-    "main.9de7cfda.css.map": "/TheSethness/ticketmaster-discovery/static/css/main.9de7cfda.css.map",
-    "main.32df2948.js.map": "/TheSethness/ticketmaster-discovery/static/js/main.32df2948.js.map",
-    "787.79ab8b55.chunk.js.map": "/TheSethness/ticketmaster-discovery/static/js/787.79ab8b55.chunk.js.map"
+    "main.css": "/ticketmaster-discovery/static/css/main.9de7cfda.css",
+    "main.js": "/ticketmaster-discovery/static/js/main.91c9528a.js",
+    "static/js/787.79ab8b55.chunk.js": "/ticketmaster-discovery/static/js/787.79ab8b55.chunk.js",
+    "static/media/logo.svg": "/ticketmaster-discovery/static/media/logo.4dd60d3eb73bee88378476193f84bf25.svg",
+    "index.html": "/ticketmaster-discovery/index.html",
+    "main.9de7cfda.css.map": "/ticketmaster-discovery/static/css/main.9de7cfda.css.map",
+    "main.91c9528a.js.map": "/ticketmaster-discovery/static/js/main.91c9528a.js.map",
+    "787.79ab8b55.chunk.js.map": "/ticketmaster-discovery/static/js/787.79ab8b55.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9de7cfda.css",
-    "static/js/main.32df2948.js"
+    "static/js/main.91c9528a.js"
   ]
 }
