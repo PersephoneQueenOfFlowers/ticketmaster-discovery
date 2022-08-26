@@ -5,9 +5,9 @@ import eventsData from './eventsData';
 import Events from './Events';
 import Event from './Event';
 import {
-  BrowserRouter,
   Routes,
-  Route
+  Route,
+  HashRouter
 } from "react-router-dom";
 
 function App() {
@@ -35,12 +35,14 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="loogo" />
       </header>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Events getDate={getDate} getEventData={getEventData} eventsData={eventsData} getSlug={getSlug} />}>
           </Route>
           <Route path="/events/:id" element={<Event eventsData={eventsData} getDate={getDate} />}>
           </Route>
         </Routes>
+      </HashRouter>
     </div>
   );
 }
