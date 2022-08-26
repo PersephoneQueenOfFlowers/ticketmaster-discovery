@@ -35,14 +35,12 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="loogo" />
       </header>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<Events getDate={getDate} getEventData={getEventData} eventsData={eventsData} getSlug={getSlug} />}>
           </Route>
           <Route path="/events/:id" element={<Event eventsData={eventsData} getDate={getDate} />}>
           </Route>
         </Routes>
-      </BrowserRouter>
     </div>
   );
 }
