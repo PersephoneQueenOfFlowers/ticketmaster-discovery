@@ -4,7 +4,7 @@ import React from "react";
 // import moment from 'moment';
 // import axios from "axios";
 import { useParams } from "react-router-dom";
-import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
+// import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
 
 const Event = ({ eventsData, getDate }) => {
 
@@ -20,7 +20,7 @@ const Event = ({ eventsData, getDate }) => {
       {
         eventsData._embedded.events.filter((event) => event.id === id).map((event) => (
           <div key={event.id}>
-            <img src={event.images[0].url} />
+            <img src={event.images[0].url} alt="team logo" />
             <h1>{event.name}</h1>
             <p>{getDate(event.dates.start.localDate)} at {getTwelveHour(event.dates.start.localTime)} - {event.dates.timezone} time</p>
             <a href={event.url}>

@@ -3,7 +3,7 @@ import React from "react";
 import eventsData from './eventsData';
 // import axios from 'axios';
 // API key: Vcdc8GVh3rwwL1UzuvJWumpSglpAShgQ Please don't use.
-import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
+// import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
 
 const Events = ({ getDate, getEventData }) => {
 
@@ -32,7 +32,7 @@ const Events = ({ getDate, getEventData }) => {
           pageEvents?._embedded?.events?.map((event, i) => (
             <a href={`events/${event.id}`} onClick={() => getEventData(event)} key={i}>
               <li className="event">
-                <img src={event.images[0].url} />
+                <img src={event.images[0].url} alt="team logo"/>
                 <div>
                   <h4>{event.name}</h4>
                   <p>{getDate(event.dates.start.localDate)}</p>
