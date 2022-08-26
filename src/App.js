@@ -6,8 +6,7 @@ import Events from './Events';
 import Event from './Event';
 import {
   Routes,
-  Route,
-  HashRouter
+  Route
 } from "react-router-dom";
 
 function App() {
