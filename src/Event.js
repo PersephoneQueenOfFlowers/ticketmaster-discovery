@@ -1,7 +1,7 @@
 // src/components/Events.js
 // API key: Vcdc8GVh3rwwL1UzuvJWumpSglpAShgQ
 import React from "react";
-// import moment from 'moment';
+import { Link } from "react-router-dom";
 // import axios from "axios";
 import { useParams } from "react-router-dom";
 // import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
@@ -26,9 +26,9 @@ const Event = ({ eventsData, getDate }) => {
             <a href={event.url}>
               visit ticketmaster for more details
             </a>
-            <p>{event.sales.presales[0].name} goes from {event.sales.presales[0].startDateTime} to {event.sales.presales[0].endDateTime}</p>
-            <p>General sales go from {event.sales.public.startDateTime} to {event.sales.public.endDateTime}</p>
-            <a href='/'>back to events</a>
+            <p>{event.sales.presales[0].name} from {event.sales.presales[0].startDateTime} to {event.sales.presales[0].endDateTime}</p>
+            <p>General sales from {event.sales.public.startDateTime} to {event.sales.public.endDateTime}</p>
+            <Link to='/'>back to events</Link>
           </div>
         ))
       }

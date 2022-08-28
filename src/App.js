@@ -5,9 +5,9 @@ import eventsData from './eventsData';
 import Events from './Events';
 import Event from './Event';
 import {
-  BrowserRouter,
   Routes,
-  Route
+  Route,
+  BrowserRouter as Router
 } from "react-router-dom";
 
 function App() {
@@ -29,20 +29,20 @@ function App() {
   const getEventData = (eventData) => {
     setEventData(eventData);
   } 
-
+  // nesting the browserRouter under the header, so we have that persist
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="loogo" />
       </header>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<Events getDate={getDate} getEventData={getEventData} eventsData={eventsData} getSlug={getSlug} />}>
           </Route>
           <Route path="/events/:id" element={<Event eventsData={eventsData} getDate={getDate} />}>
           </Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
