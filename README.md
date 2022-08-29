@@ -2,6 +2,7 @@
 Assignment displays a home page with event data from tm discovery api.
 Did not want to use api even though it works. Reason is that the call errors
 out with a 429 after a seemingly small number of calls. Please see screenshot png api-fail-429.png in src directory. 
+Additionally, due to old machine and OS, did not install commonly used tools: SCSS, moment. They broke the application before OS upgrade and didn't want to risk it. Included commented version of SCSS use example for BEM-style pre-process formatting. 
 
 Automatic proxy is set up in package.json to avoid CORS issues.
 

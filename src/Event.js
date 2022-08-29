@@ -1,14 +1,15 @@
-// src/components/Events.js
-// API key: Vcdc8GVh3rwwL1UzuvJWumpSglpAShgQ
 import React from "react";
-import { Link } from "react-router-dom";
-// import axios from "axios";
-import { useParams } from "react-router-dom";
-// import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
+import { Link, useParams } from "react-router-dom";
 
 const Event = ({ eventsData, getDate }) => {
 
-  const { id } = useParams();
+  // when this component loads, make sure window scrolls to top, 
+  // no matter where scroll was on events click.  
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const { formattedSlug } = useParams();
 
   const getTwelveHour = (twentyFour) => {
     const twelveHour = Number(twentyFour.substring(0, 2)) % 12;
@@ -16,19 +17,19 @@ const Event = ({ eventsData, getDate }) => {
   }
 
   return (
-    <div className='event-container'>
+    <div className='app__event-container'>
       {
-        eventsData._embedded.events.filter((event) => event.id === id).map((event) => (
+        eventsData._embedded.events.filter((event) => event.formattedSlug === formattedSlug).map((event) => (
           <div key={event.id}>
-            <img src={event.images[0].url} alt="team logo" />
+            <img src={event.images[0].url} alt="individual team logo" />
             <h1>{event.name}</h1>
             <p>{getDate(event.dates.start.localDate)} at {getTwelveHour(event.dates.start.localTime)} - {event.dates.timezone} time</p>
-            <a href={event.url}>
+            <a className="app__link" href={event.url}>
               visit ticketmaster for more details
             </a>
             <p>{event.sales.presales[0].name} from {event.sales.presales[0].startDateTime} to {event.sales.presales[0].endDateTime}</p>
             <p>General sales from {event.sales.public.startDateTime} to {event.sales.public.endDateTime}</p>
-            <Link to='/'>back to events</Link>
+            <Link to='/' className="app__link">back to events</Link>
           </div>
         ))
       }
